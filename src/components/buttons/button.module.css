@@ -1,0 +1,14 @@
+.getbtn{
+    background-color: black;
+    color: tomato;
+    border: 1px solid tomato;
+    padding: 8px 25px;
+    margin-top: 25px;
+    font-weight: 500;
+    border-radius: .25rem;
+}
+.getbtn:hover{
+    border: 1px solid black;
+    background: tomato;
+    color: black;
+}

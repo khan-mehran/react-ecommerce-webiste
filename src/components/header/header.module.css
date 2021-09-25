@@ -1,0 +1,13 @@
+.nav{
+    transition: all .5s ease-in-out;
+}
+.nav:hover{
+    color: tomato !important;
+}
+.cart{
+    /* color: cornsilk; */
+    background-color: transparent;
+    border: none;
+    padding: 5px 20px 5px 0px;
+}
+

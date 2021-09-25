@@ -1,0 +1,10 @@
+.hero{
+    margin: 100px 0;
+}
+.hero span{
+    color: tomato;
+}
+.hero h5{
+    margin-top: 35px;
+    color: tomato;
+}

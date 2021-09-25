@@ -1,0 +1,18 @@
+.footer{
+    background-color: black;
+    color: #c5c6c4;
+    padding: 10px 0 10px 0;
+}
+.nav{
+    transition: all .5s ease-in-out;
+}
+.nav:hover{
+    color: tomato !important;
+}
+.footer a{
+    color: #c5c6c4;
+}
+.copy_right{
+    padding-top: 10px;
+    text-align: center;
+}
