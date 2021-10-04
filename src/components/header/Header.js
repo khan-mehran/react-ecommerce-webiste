@@ -4,6 +4,7 @@ import styles from './header.module.css'
 import logo from '../../images/logo.png'
 import { FaOpencart } from "react-icons/fa";
 import Cart from './cart'
+import  Button  from '../buttons/Button';
 
 export const Header = () => {
     return (
@@ -34,7 +35,7 @@ export const Header = () => {
                                 <Cart/>
                             {/* <FaOpencart style={{color: 'white'}} /> */}
                             </button>
-                            <button class="btn btn-outline-danger" type="submit">GET IT NOW</button>
+                          <Link to='/login'>  <button className={styles.login_btn} type="submit">LOGIN</button></Link>
                         </div>
                     </div>
                 </nav>

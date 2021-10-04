@@ -11,3 +11,16 @@
     padding: 5px 20px 5px 0px;
 }
 
+.login_btn{
+    background-color: black;
+    color: tomato;
+    border: 1px solid tomato;
+    padding: 8px 25px;
+    font-weight: 500;
+    border-radius: .25rem;
+}
+.login_btn:hover{
+    border: 1px solid black;
+    background: tomato;
+    color: black;
+}

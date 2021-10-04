@@ -1,0 +1,17 @@
+.error_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c5c6c4;
+    flex-direction: column;
+    margin: 50px 0 150px;
+}
+.error_text span{
+    color: tomato;
+}
+.error_text h5{
+    font-size:75px;
+}
+.error_text h2{
+    margin-top: 80px;
+}

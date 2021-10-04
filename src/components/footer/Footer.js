@@ -15,7 +15,7 @@ const Footer = () => {
                             <h5>Contact Info</h5>
                             <p>PHONE: Toll Free (123) 456-7890</p>
                             <p>EMAIL: mail@ecommerce.com</p>
-                            <p>ADDRESS: 123 Street Name, City, Egypt</p>
+                            <p>ADDRESS: 123 Street Name, City, Pakistan</p>
                         </div>
                         <div className='col-4'>
                             <h5>Quick Links</h5>

@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom';
-import  Button  from '../../components/buttons/Button';
+// import Button from "@material-ui/core/Button";
+import {useDispatch} from 'react-redux'
+import AddIcon from "@material-ui/icons/Add";
+import RemoveIcon from "@material-ui/icons/Remove";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
+import allActions from '../../redux/action'
+import Button  from '../../components/buttons/Button';
+import products_banner from '../../images/products_banner.jpg'
 
 
 const Detail = () => {
     const [products, setProducts] = useState([])
-    const [categoryAll, setCategoryAll] = useState([])
-    const {category} = useParams();
+    const [itemCount, setItemCount] = React.useState(1);
+    const dispatch = useDispatch()
     const {id} = useParams();
 
     useEffect(() => {
@@ -17,15 +24,9 @@ const Detail = () => {
        
     }, [])
 
-    useEffect(() => {
-        fetch(`https://fakestoreapi.com/products/${category}`)
-        .then(respone => respone.json())
-        .then(json => setCategoryAll([...categoryAll, json]))
-    }, [])
-    
-
-    console.log('mehran',categoryAll)
     return (
+        <div style={{paddingBottom:'50px'}}>
+        {/* <img src={products_banner} style={{width:'100%',height:'365px'}}/> */}
         <div className='container'>
         <div className='row'>
             {
@@ -40,8 +41,23 @@ const Detail = () => {
                                 <div className='col-lg-7 py-5'>
                                         <div className="card-body">
                                             <p className="card-title">{item.description}</p>
-                                            <h6>Price: {item.price}</h6>
-                                            <Button/>
+                                            <h6>Price: ${item.price}</h6>
+                                            <Button label='ADD TO CART'/>
+                                            {/* <ButtonGroup>
+                                                <Button
+                                                    onClick={()=>dispatch(allActions.cartAction.decrement())}
+                                                >
+                                                    {" "}
+                                                    <RemoveIcon fontSize="small" />
+                                                </Button>
+                                                <Button
+                                                
+                                                    onClick={()=>dispatch(allActions.cartAction.increment())}
+                                                >
+                                                    {" "}
+                                                    <AddIcon fontSize="small" />
+                                                </Button>
+                                            </ButtonGroup> */}
                                         </div>
                                 </div>
                             </>
@@ -49,7 +65,7 @@ const Detail = () => {
                     )
                 })
             }
-             {
+             {/* {
               
               categoryAll.map((item,index)=>{
                   return(
@@ -68,8 +84,9 @@ const Detail = () => {
 
                   )
               })
-          }
+          } */}
        </div>
+        </div>
         </div>
     )
 }

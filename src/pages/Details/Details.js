@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom';
 import  Button  from '../../components/buttons/Button';
-
+import Bbanner from '../../images/Bbanner.jpg'
 
 const Details = () => {
-    const [products, setProducts] = useState([])
+    const [itemCount, setItemCount] = React.useState(1);
     const [categoryAll, setCategoryAll] = useState([])
     const {category} = useParams();
 
@@ -16,11 +16,14 @@ const Details = () => {
     }, [])
     
 
-    // console.log('mehran',category)
-    console.log('akif',categoryAll);
+    // console.log('mehran',category);
     return (
+        <div style={{background:'#f7f7f7', paddingBottom:'50px'}}>
+        {/* <img src={Bbanner} style={{width:'100%',height:'355px'}}/> */}
         <div className='container'>
         <div className='row'>
+        <h3 style={{textAlign:'center', margin:'50px 0'}}>{category} </h3>
+        <hr/>
              {
               
               categoryAll[0]?.map((item,index)=>{
@@ -31,8 +34,8 @@ const Details = () => {
                                   <div className="card-wrap" key={index}>
                                       <img src={item.image} className='img-fluid' alt="shirt"/>
                                       <div className="card-body">
-                                          <h5 className="card-title">{item.price}</h5>
-                                          <Button/>
+                                          <h5 className="card-title">${item.price}</h5>
+                                          <Button label='GET IT NOW'/>
                                       </div>
                                    </div>
                                    </Link>
@@ -43,7 +46,7 @@ const Details = () => {
           }
        </div>
         </div>
-    )
+   </div> )
 }
 
 export default Details

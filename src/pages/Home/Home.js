@@ -1,5 +1,5 @@
 import React from 'react'
-import banner1 from '../../images/banner1.jpg'
+import hero_banner from '../../images/hero_banner.jpg'
 import styles from './home.module.css'
 import Hero from '../../components/hero/Hero'
 import Card from '../../components/card/Card'
@@ -36,7 +36,7 @@ const Home = () => {
           
           {/* banner section start */}
           <section className={styles.banner}>
-                <img src={banner1} style={{width:'100%',height:'480px'}}/>
+                <img src={hero_banner} style={{width:'100%',height:'480px'}}/>
           </section>
           {/* banner section end */}
 
@@ -53,8 +53,8 @@ const Home = () => {
         <section className={styles.category}>
             <div className='container'>
                     <div className='row mt-4'>
-                        <h3>JEWELERY</h3>
-                        <Link to={`/details/jewelery`}><Jewelery/></Link>
+                    <Link to={`/details/jewelery`}> <h3>JEWELERY</h3></Link>
+                        <Jewelery/>
                     </div>
             </div>
         </section>

@@ -23,8 +23,8 @@ const Womens = () => {
                                     <div className="card-wrap" key={index}>
                                         <img src={item.image} className='img-fluid' alt="shirt"/>
                                         <div className="card-body">
-                                            <h5 className="card-title">{item.price}</h5>
-                                            <Button/>
+                                            <h5 className="card-title">${item.price}</h5>
+                                            <Button label='GET IT NOW'/>
                                         </div>
                                      </div>
                                      </Link>
