@@ -10,7 +10,7 @@ const womenClothes=(postWomen)=>{
         payload:postWomen
     }
 }
-
+// eslint-disable-next-line 
 export default {
     fetchWomen,
     womenClothes

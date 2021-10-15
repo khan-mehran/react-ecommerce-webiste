@@ -1,6 +1,5 @@
 import  Button  from '../buttons/Button';
 import React, { useEffect } from 'react'
-import hero from '../../images/hero-img.jpg'
 import allActions from '../../redux/action';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -9,6 +8,7 @@ const Category = () => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(allActions.categoryAction.fetchCategory())
+        //eslint-disable-next-line
     }, [])
 
     return (

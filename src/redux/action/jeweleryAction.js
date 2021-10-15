@@ -9,7 +9,7 @@ const jewelery=(postJewelery)=>{
         payload:postJewelery
     }
 }
-
+// eslint-disable-next-line 
 export default {
     fetchJewelery,
     jewelery

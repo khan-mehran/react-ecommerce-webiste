@@ -5,7 +5,7 @@ import styles from './about.module.css'
 const About = () => {
     return (
         <div className={styles.about}>
-             <img src={about_usbanner} style={{width:'100%',height:'355px'}}/>
+             <img src={about_usbanner} alt='banner' style={{width:'100%',height:'355px'}}/>
              <div className='container'>
                     <h3 className={styles.who}>WHO WE ARE</h3>
                     <div className={styles.row_about}>

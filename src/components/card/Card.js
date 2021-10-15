@@ -8,11 +8,11 @@ import  Button  from '../buttons/Button';
 import './style.css'
 
 const Card = () => {
-    const storeData = useSelector(state => state)
     const {userItem} = useSelector(state => state.userReducer)
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(allActions.userAction.fetchUser())
+        //eslint-disable-next-line
     }, [])
 
     return (

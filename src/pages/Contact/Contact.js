@@ -5,7 +5,7 @@ import styles from './contact.module.css'
 const Contact = () => {
     return (
         <div>
-            <img src={contactbanner} style={{width:'100%',height:'355px'}}/>
+            <img src={contactbanner} alt='contact' style={{width:'100%',height:'355px'}}/>
              <div className='container'>
                 <div className='row  mt-5'>
                     <div className='col-7 py-5'>

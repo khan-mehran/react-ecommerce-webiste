@@ -10,6 +10,7 @@ const Electronics = () => {
     const dispatch = useDispatch()  
     useEffect(() => {
         dispatch(allActions.electronicAtion.fetchElectronic())
+        //eslint-disable-next-line
     }, [])
     return (
         <div className='container'>

@@ -11,7 +11,7 @@ const requestUser =(postUser)=>{
     }
 }
 
-
+// eslint-disable-next-line 
 export default {
     fetchUser,
     requestUser,

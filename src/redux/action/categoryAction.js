@@ -10,7 +10,7 @@ const categoryResponse=(categoryPost)=>{
         payload:categoryPost
     }
 }
-
+// eslint-disable-next-line 
 export default {
     fetchCategory,
     categoryResponse

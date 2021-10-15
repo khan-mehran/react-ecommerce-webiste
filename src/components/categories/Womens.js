@@ -9,6 +9,7 @@ const Womens = () => {
     const {womenItem} = useSelector(state => state.womenReducer)
     useEffect(() => {
         dispatch(allActions.womenAction.fetchWomen())
+        //eslint-disable-next-line
     }, [])
 
     return (

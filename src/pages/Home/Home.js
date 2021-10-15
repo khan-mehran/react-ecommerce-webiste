@@ -36,7 +36,7 @@ const Home = () => {
           
           {/* banner section start */}
           <section className={styles.banner}>
-                <img src={hero_banner} style={{width:'100%',height:'480px'}}/>
+                <img src={hero_banner} alt='hero_banner' style={{width:'100%',height:'480px'}}/>
           </section>
           {/* banner section end */}
 

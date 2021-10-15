@@ -10,7 +10,7 @@ const Footer = () => {
               <section className={styles.footer}>
                   <div className='container'>
                     <div className='row' >
-                        <Link className="navbar-brand" to='/'><img src={logo} style={{height:'70px', width:'120px'}}/></Link>
+                        <Link className="navbar-brand" to='/'><img src={logo} alt='logo' style={{height:'70px', width:'120px'}}/></Link>
                         <div className='col-4'>
                             <h5>Contact Info</h5>
                             <p>PHONE: Toll Free (123) 456-7890</p>

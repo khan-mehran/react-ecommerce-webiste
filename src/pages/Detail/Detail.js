@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
-import { Link } from 'react-router-dom';
-// import Button from "@material-ui/core/Button";
-import {useDispatch} from 'react-redux'
-import AddIcon from "@material-ui/icons/Add";
-import RemoveIcon from "@material-ui/icons/Remove";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import allActions from '../../redux/action'
 import Button  from '../../components/buttons/Button';
-import products_banner from '../../images/products_banner.jpg'
+// import {useDispatch} from 'react-redux'
+// import { Link } from 'react-router-dom';
+// import AddIcon from "@material-ui/icons/Add";
+// import RemoveIcon from "@material-ui/icons/Remove";
+// import ButtonGroup from "@material-ui/core/ButtonGroup";
+// import allActions from '../../redux/action'
+// import products_banner from '../../images/products_banner.jpg'
 
 
 const Detail = () => {
     const [products, setProducts] = useState([])
-    const [itemCount, setItemCount] = React.useState(1);
-    const dispatch = useDispatch()
+    // const [itemCount, setItemCount] = React.useState(1);
+    // const dispatch = useDispatch()
     const {id} = useParams();
 
     useEffect(() => {
@@ -22,7 +21,7 @@ const Detail = () => {
         .then(respone => respone.json())
         .then(json => setProducts([...products,json]))
        
-    }, [])
+    })
 
     return (
         <div style={{paddingBottom:'50px'}}>

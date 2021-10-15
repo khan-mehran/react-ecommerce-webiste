@@ -9,7 +9,7 @@ const eclctronics=(postElectric)=>{
         payload:postElectric
     }
 }
-
+// eslint-disable-next-line 
 export default {
     fetchElectronic,
     eclctronics

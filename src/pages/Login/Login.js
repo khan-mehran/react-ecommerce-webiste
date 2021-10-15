@@ -1,4 +1,3 @@
-import  Button  from '../../components/buttons/Button'
 import React, { useState } from 'react'
 import styles from './login.module.css'
 import { useHistory } from 'react-router-dom'
@@ -16,7 +15,7 @@ const handleChange=(e) => {
 }
 const handleSubmit=() => {
     console.log(user);
-    if(user.name=='mehran' && user.pass=='website@123')
+    if(user.name==='mehran' && user.pass==='website@123')
     {
         history.push('/')
     }

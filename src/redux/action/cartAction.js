@@ -9,6 +9,7 @@ const decrement =()=>{
         type: 'REMOVE',
     }
 }
+// eslint-disable-next-line 
 export default {
     increment,
     decrement

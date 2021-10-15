@@ -2,9 +2,8 @@ import React from 'react'
 import {Link } from 'react-router-dom';
 import styles from './header.module.css'
 import logo from '../../images/logo.png'
-import { FaOpencart } from "react-icons/fa";
 import Cart from './cart'
-import  Button  from '../buttons/Button';
+
 
 export const Header = () => {
     return (
@@ -12,7 +11,7 @@ export const Header = () => {
             {/* <Router> */}
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div className="container">
-                        <Link className="navbar-brand" to='/'><img src={logo} style={{height:'70px', width:'120px'}}/></Link>
+                        <Link className="navbar-brand" to='/'><img src={logo} alt='logo' style={{height:'70px', width:'120px'}}/></Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                         </button>

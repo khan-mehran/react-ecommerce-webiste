@@ -1,7 +1,6 @@
 import React from 'react'
 import Category from '../../components/categories/Category'
 import styles from './products.module.css'
-import tshirt_banner from '../../images/tshirt_banner.jpg'
 
 const Products = () => {
     return (

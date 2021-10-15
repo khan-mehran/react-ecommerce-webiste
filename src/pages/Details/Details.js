@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom';
 import  Button  from '../../components/buttons/Button';
-import Bbanner from '../../images/Bbanner.jpg'
 
 const Details = () => {
-    const [itemCount, setItemCount] = React.useState(1);
+    // const [itemCount, setItemCount] = React.useState(1);
     const [categoryAll, setCategoryAll] = useState([])
     const {category} = useParams();
 
@@ -13,10 +12,10 @@ const Details = () => {
         fetch(`https://fakestoreapi.com/products/category/${category}`)
         .then(respone => respone.json())
         .then(json => setCategoryAll([...categoryAll, json]))
+        //eslint-disable-next-line
     }, [])
     
 
-    // console.log('mehran',category);
     return (
         <div style={{background:'#f7f7f7', paddingBottom:'50px'}}>
         {/* <img src={Bbanner} style={{width:'100%',height:'355px'}}/> */}

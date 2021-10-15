@@ -9,6 +9,7 @@ const Jewelery = () => {
     const {jeweleryItem} = useSelector(state => state.jeweleryReducer)
     useEffect(() => {
        dispatch(allActions.jeweleryAction.fetchJewelery())
+       //eslint-disable-next-line
     }, [])
 
     return (
