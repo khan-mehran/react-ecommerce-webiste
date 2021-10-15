@@ -20,8 +20,8 @@ const Detail = () => {
         fetch(`https://fakestoreapi.com/products/${id}`)
         .then(respone => respone.json())
         .then(json => setProducts([...products,json]))
-       
-    })
+       //eslint-disable-next-line
+    },[])
 
     return (
         <div style={{paddingBottom:'50px'}}>
