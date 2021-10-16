@@ -19,7 +19,7 @@ const Electronics = () => {
                 electricItem && electricItem.map((item,index)=>{
                     return(
                            
-                                <div className='col-lg-3 d-flex justify-content-center'>
+                                <div className='col-12 col-md-6 col-lg-3  d-flex justify-content-center'>
                                     <Link to={`/detail/${item.id}`}>
                                     <div className="card-wrap" key={index}>
                                         <img src={item.image} className='img-fluid' alt="shirt"/>
