@@ -11,13 +11,13 @@ const Footer = () => {
                   <div className='container'>
                     <div className='row' >
                         <Link className="navbar-brand" to='/'><img src={logo} alt='logo' style={{height:'70px', width:'120px'}}/></Link>
-                        <div className='col-4'>
+                        <div className='col-12 col-md-4'>
                             <h5>Contact Info</h5>
                             <p>PHONE: Toll Free (123) 456-7890</p>
                             <p>EMAIL: mail@ecommerce.com</p>
                             <p>ADDRESS: 123 Street Name, City, Pakistan</p>
                         </div>
-                        <div className='col-4'>
+                        <div className='col-12 col-md-4'>
                             <h5>Quick Links</h5>
                                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                     <li className="nav-item">
@@ -31,7 +31,7 @@ const Footer = () => {
                                     </li>
                                 </ul>
                         </div>
-                        <div className='col-4'>
+                        <div className='col-12 col-md-4'>
                             <h5>Company Details</h5>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>

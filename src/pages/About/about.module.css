@@ -1,10 +1,15 @@
 .about{
-    margin: 0 0 90px 0;
+    margin: 0 0 130px 0;
 }
-.row_about{
-    display: flex;
+.banner{
+    position: relative;
 }
-.about_data{
+.about h2{
+    position: absolute;
+    top: 320px;
+    left: 100px;
+}
+#about_data{
     background-color: black;
     color: #c5c6c4;
     text-align: center;
@@ -14,12 +19,84 @@
     box-shadow: 2px 11px 15px 2px rgba(0,0,0,0.5);
 }
 
-.about_data p:hover{
+#about_data p:hover{
     color: tomato;
 }
-.who{
-    margin: 50px 0;
+.about_text h3{
+    margin: 70px 0 15px 0;
     text-align: center;
     font-size: 32px;
     font-weight: 700;
+}
+.about_text p{
+    font-size:17px;
+    padding:0 80px;
+    text-align:center;
+    margin-bottom:50px;
+}
+
+/* for tablet responsive */
+@media only screen and (max-width:991px) {
+    .about{
+        margin: 0 0 90px 0;
+    }
+    .about h2{
+        position: absolute;
+        top: 220px;
+        left: 100px;
+    }
+    .about_text h3{
+        margin: 50px 0 15px 0;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 700;
+    }
+    .about_text p{
+        font-size:15px;
+        padding:0 80px;
+        text-align:center;
+        margin-bottom:50px;
+    }
+    #about_data{
+        text-align: center;
+        font-size:13px;
+        margin: 0 5px;
+        padding: 20px;
+    }
+    #about_data h3{
+        font-size:20px;
+    }
+}
+
+/* for mobile responsive */
+@media only screen and (max-width:767px) {
+    .about{
+        margin: 0 0 70px 0;
+    }
+    .about h2{
+        position: absolute;
+        top: 160px;
+        left: 70px;
+    }
+    .about_text h3{
+        margin: 30px 0 15px 0;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .about_text p{
+        font-size:13px;
+        padding:0 20px;
+        text-align:center;
+        margin-bottom:30px;
+    }
+    #about_data{
+        max-width:70%;
+        text-align: center;
+        font-size:13px;
+        margin: 10px 5px;
+        padding: 20px;
+    }
+    #about_data h3{
+        font-size:20px;
+    }
 }

@@ -8,3 +8,34 @@
     margin-top: 35px;
     color: tomato;
 }
+/* for tablet responsive */
+@media only screen and (max-width:991px) {
+    .hero{
+        margin: 60px 0;
+    }
+    .hero h1{
+            font-size: 25px;
+    }
+    .hero h5{
+        margin-top: 15px;
+        font-size:15px;
+    }
+}
+
+/* for mobile responsive */
+@media only screen and (max-width:767px) {
+    .hero{
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: center;
+        text-align: center;
+    }
+    #hero_text{
+        order: 2;
+    }
+    #hero_image{
+        order: 1;
+    }
+}

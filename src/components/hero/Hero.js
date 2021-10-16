@@ -11,7 +11,7 @@ const Hero = () => {
         {/* hero section start */}
         <div className={styles.hero}>
             <div className='row'>
-                <div className='col-5 mt-3'>
+                <div className='col-12 col-md-5 mt-3' id={styles.hero_text}>
                     <h1><span>TAKE</span> CARE OF YOUR <span>EYES</span>, GIVE THEM <span>GOOD</span> LENSES</h1>
                     <hr/>
                     <h5>We develop high technology for lens care</h5>
@@ -19,8 +19,8 @@ const Hero = () => {
                         <Button label='OUR PRODUCTS' />
                     </Link>
                 </div>
-                <div className='col-7'>
-                    <img src={hero} alt='hero-banner' />
+                <div className='col-12 col-md-7' id={styles.hero_img} >
+                    <img src={hero} alt='hero-banner' className='img-fluid'/>
                 </div>
             </div>
         </div>
