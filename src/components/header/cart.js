@@ -10,7 +10,7 @@ export default function Cart() {
     <div style={{ display: "block", padding: 20, color: 'white' }}>
       <div>
         <Badge color="secondary" badgeContent={cartReducer}>
-          <ShoppingCartIcon />{" "}
+          <ShoppingCartIcon />
         </Badge>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router , Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Footer from './components/footer/Footer';
 import { Header } from './components/header/Header';
@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header/>
+        <Header />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/products' component={Products} />
@@ -26,7 +26,7 @@ function App() {
           <Route path='/login' component={Login} />
           <Route path='*' component={Error} />
         </Switch>
-        <Footer/>
+        <Footer />
       </Router>
     </div>
   );
