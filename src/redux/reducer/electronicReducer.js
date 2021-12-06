@@ -1,14 +1,14 @@
-const initialState={
-    electricItem:[]
+const initialState = {
+    electricItem: []
 }
-const electronicReducer=(state=initialState,action)=>{
+const electronicReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ELECTRONIC':
             return {
                 ...state,
-                electricItem:action.payload
+                electricItem: action.payload
             }
-    
+
         default:
             return state;
     }

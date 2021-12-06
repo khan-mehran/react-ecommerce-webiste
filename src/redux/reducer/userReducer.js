@@ -1,21 +1,21 @@
 
 
-const initialState ={
-    userItem:[],
+const initialState = {
+    userItem: [],
 }
 
-const userReducer=(state=initialState,action)=>{
+const userReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'GET_DATA':
             return {
                 ...state,
-                userItem:action.payload
+                userItem: action.payload
             }
-    
+
         default:
             return state;
     }
 }
- 
 
-export default userReducer 
+
+export default userReducer

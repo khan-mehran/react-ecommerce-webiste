@@ -1,15 +1,15 @@
-const initialState={
-    categoryItem:[]
+const initialState = {
+    categoryItem: []
 }
 
-const categoryReducer=(state=initialState,action)=>{
+const categoryReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'CATOGREY':
             return {
                 ...state,
-                categoryItem:action.payload
+                categoryItem: action.payload
             }
-    
+
         default:
             return state;
     }

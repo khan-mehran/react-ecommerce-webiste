@@ -1,15 +1,6 @@
-const increment = () => {
-    console.log()
+const cartAction = type => { //ADD | REMOVE
     return {
-        type: 'ADD',
+        type: type
     }
 }
-const decrement = () => {
-    return {
-        type: 'REMOVE',
-    }
-}
-export default {
-    increment,
-    decrement
-}
+export default cartAction;

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router'
 import Button from '../../components/buttons/Button';
+import cartAction from '../../redux/action/cartAction';
 
 const Detail = () => {
     const [products, setProducts] = useState([])
     const { id } = useParams();
-
+    const dispatch = useDispatch();
     useEffect(() => {
         fetch(`https://fakestoreapi.com/products/${id}`)
             .then(respone => respone.json())
@@ -29,7 +31,9 @@ const Detail = () => {
                                         <div className="card-body">
                                             <p className="card-title">{item.description}</p>
                                             <h6>Price: ${item.price}</h6>
-                                            <Button label='ADD TO CART' />
+                                            <Button label='ADD TO CART' onClick={() => {
+                                                dispatch(cartAction('ADD'))
+                                            }} />
                                         </div>
                                     </div>
                                 </>
