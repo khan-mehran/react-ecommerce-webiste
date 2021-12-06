@@ -32,12 +32,11 @@ const Detail = () => {
                                             <p className="card-title">{item.description}</p>
                                             <h6>Price: ${item.price}</h6>
                                             <Button label='ADD TO CART' onClick={() => {
-                                                dispatch(cartAction('ADD'))
+                                                dispatch(cartAction('ADD', item));
                                             }} />
                                         </div>
                                     </div>
                                 </>
-
                             )
                         })
                     }

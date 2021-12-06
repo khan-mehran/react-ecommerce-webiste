@@ -4,12 +4,12 @@ import { useSelector } from "react-redux";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 export default function Cart() {
-  const cartReducer = useSelector(state => state.cartReducer)
+  const totalItems = useSelector(state => state.cartReducer.totalItems)
 
   return (
     <div style={{ display: "block", padding: 20, color: 'white' }}>
       <div>
-        <Badge color="secondary" badgeContent={cartReducer}>
+        <Badge color="secondary" badgeContent={totalItems}>
           <ShoppingCartIcon />
         </Badge>
       </div>
