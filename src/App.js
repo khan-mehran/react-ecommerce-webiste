@@ -10,6 +10,7 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Products from './pages/Products/Products';
 import Error from './pages/Error/Error';
+import CartScreen from './pages/Cart/CartScreen';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
           <Route path='/login' component={Login} />
+          <Route path='/cart' component={CartScreen} />
           <Route path='*' component={Error} />
         </Switch>
         <Footer />
