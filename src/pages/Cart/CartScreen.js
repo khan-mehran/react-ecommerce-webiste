@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDisplay } from '../../redux/action/cartAction';
-
+import Button from '../../components/buttons/Button';
 const CartScreen = (props) => {
     const dispatch = useDispatch();
-    const items = useSelector(state => state.cartReducer);
+    const state = useSelector(state => state.cartReducer);
+    console.log(state, 888888888)
     useEffect(() => {
         dispatch(setDisplay())
     }, [])
@@ -12,18 +13,31 @@ const CartScreen = (props) => {
         <div style={{ paddingBottom: '50px', paddingTop: '10px' }}>
             <div className='container'>
                 <div style={{ display: 'flex', justifyContent: 'flex-end', fontSize: 20, fontFamily: 'cursive' }}>
-                    Total Price: {items.totalItems}$
+                    Total Price: {state.totalItems}$
                 </div>
 
-                <div className={"row"}>
-                    <div className={"col-4"}>
-                        <img src="" width={'100%'} height={"300px"}/>
-                    </div>
-                    <div className={"col-8"}>
-                        <div>
-
-                        </div>
-                    </div>
+                <div className='row'>
+                    {
+                        state.items.map((item, index) => {
+                            return (
+                                <>
+                                    <div className='col-lg-5 mb-3' >
+                                        <div className='card-wrap' key={index}>
+                                            <img src={item.image} className='img-fluid' alt="shirt" />
+                                        </div>
+                                    </div>
+                                    <div className='col-lg-7 py-5'>
+                                        <div className="card-body">
+                                            <p className="card-title">{item.description}</p>
+                                            <h6>Price: ${item.price}</h6>
+                                            
+                                            {/* <Button label='ADD TO CART' onClick={() => {}}/> */}
+                                        </div>
+                                    </div>
+                                </>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>
