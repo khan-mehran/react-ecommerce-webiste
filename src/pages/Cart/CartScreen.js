@@ -12,8 +12,8 @@ const CartScreen = (props) => {
     return (
         <div style={{ paddingBottom: '50px', paddingTop: '10px' }}>
             <div className='container'>
-                <div style={{ display: 'flex', justifyContent: 'flex-end', fontSize: 20, fontFamily: 'cursive' }}>
-                    Total Price: {state.totalItems}$
+                <div style={{ display: 'flex', justifyContent: 'flex-end', fontSize: 20, fontFamily: 'cursive', flexDirection: 'row' }}>
+                <Button label='Order Now' onClick={() => { }} />
                 </div>
 
                 <div className='row'>
@@ -30,8 +30,14 @@ const CartScreen = (props) => {
                                         <div className="card-body">
                                             <p className="card-title">{item.description}</p>
                                             <h6>Price: ${item.price}</h6>
-                                            
-                                            {/* <Button label='ADD TO CART' onClick={() => {}}/> */}
+                                            <h6>Quantity: {item.quantity}</h6>
+
+                                            {/* <div style={{  }}> */}
+                                                {/* <Button label='Dec' onClick={() => { }} /> */}
+                                               
+                                                {/* <button style={{backgroundColor: 'white', border}}></button> */}
+
+                                            {/* </div> */}
                                         </div>
                                     </div>
                                 </>
