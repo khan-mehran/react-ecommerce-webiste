@@ -1,16 +1,8 @@
-const increment =() =>{
-    console.log()
+const cartAction = (type, item) => { //ADD | REMOVE
     return {
-        type: 'ADD',
+        type: type,
+        item: item
     }
 }
-const decrement =()=>{
-    return{
-        type: 'REMOVE',
-    }
-}
-// eslint-disable-next-line 
-export default {
-    increment,
-    decrement
-}
+export const setDisplay = () => ({ type: 'SETDISPLAY' })
+export default cartAction;

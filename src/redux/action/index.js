@@ -5,7 +5,7 @@ import jeweleryAction from './jeweleryAction'
 import categoryAction from './categoryAction'
 import cartAction from './cartAction'
 
-const allActions={
+const allActions = {
     userAction,
     womenAction,
     electronicAtion,

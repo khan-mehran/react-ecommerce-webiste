@@ -1,25 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router'
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setDisplay } from '../../redux/action/cartAction';
 import Button from '../../components/buttons/Button';
-import cartAction from '../../redux/action/cartAction';
-
-const Detail = () => {
-    const [products, setProducts] = useState([])
-    const { id } = useParams();
+const CartScreen = (props) => {
     const dispatch = useDispatch();
+    const state = useSelector(state => state.cartReducer);
+    console.log(state, 888888888)
     useEffect(() => {
-        fetch(`https://fakestoreapi.com/products/${id}`)
-            .then(respone => respone.json())
-            .then(json => setProducts([...products, json]))
+        dispatch(setDisplay())
     }, [])
-
     return (
-        <div style={{ paddingBottom: '50px' }}>
+        <div style={{ paddingBottom: '50px', paddingTop: '10px' }}>
             <div className='container'>
+                <div style={{ display: 'flex', justifyContent: 'flex-end', fontSize: 20, fontFamily: 'cursive', flexDirection: 'row' }}>
+                <Button label='Order Now' onClick={() => { }} />
+                </div>
+
                 <div className='row'>
                     {
-                        products.map((item, index) => {
+                        state.items.map((item, index) => {
                             return (
                                 <>
                                     <div className='col-lg-5 mb-3' >
@@ -31,9 +30,14 @@ const Detail = () => {
                                         <div className="card-body">
                                             <p className="card-title">{item.description}</p>
                                             <h6>Price: ${item.price}</h6>
-                                            <Button label='ADD TO CART' onClick={() => {
-                                                dispatch(cartAction('ADD', item));
-                                            }} />
+                                            <h6>Quantity: {item.quantity}</h6>
+
+                                            {/* <div style={{  }}> */}
+                                                {/* <Button label='Dec' onClick={() => { }} /> */}
+                                               
+                                                {/* <button style={{backgroundColor: 'white', border}}></button> */}
+
+                                            {/* </div> */}
                                         </div>
                                     </div>
                                 </>
@@ -43,7 +47,7 @@ const Detail = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default Detail
+export default CartScreen;

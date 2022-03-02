@@ -5,16 +5,15 @@ import styles from './products.module.css'
 const Products = () => {
     return (
         <>
-        {/* <img src={tshirt_banner} style={{width:'100%',height:'355px'}}/> */}
-        <section className={styles.category}>
-            <div className='container'>
+            <section className={styles.category}>
+                <div className='container'>
                     <div className='row mt-4'>
                         <h3>All Products</h3>
-                        <Category/>
+                        <Category />
                     </div>
-            </div>
-         </section>
-       </>
+                </div>
+            </section>
+        </>
     )
 }
 

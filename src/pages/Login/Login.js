@@ -6,23 +6,22 @@ const Login = () => {
 
     const history = useHistory();
     const [user, setUser] = useState({
-        name:'',
-        pass:''
+        name: '',
+        pass: ''
     })
-const handleChange=(e) => {
-    const  {name,value}=e.target; 
-    setUser({...user,[name]:value})
-}
-const handleSubmit=() => {
-    console.log(user);
-    if(user.name==='mehran' && user.pass==='website@123')
-    {
-        history.push('/')
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setUser({ ...user, [name]: value })
     }
-    else{
-        alert('Wrong Email or Password')
+    const handleSubmit = () => {
+        console.log(user);
+        if (user.name === 'mehran' && user.pass === 'website@123') {
+            history.push('/')
+        }
+        else {
+            alert('Wrong Email or Password')
+        }
     }
-}
     return (
         <div className={styles.login_wrap}>
             <div className={styles.login}>

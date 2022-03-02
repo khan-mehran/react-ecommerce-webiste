@@ -1,14 +1,14 @@
-const initialState={
-    jeweleryItem:[]
+const initialState = {
+    jeweleryItem: []
 }
-const jeweleryReducer=(state=initialState,action)=>{
+const jeweleryReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'JEWELERY':
             return {
                 ...state,
-                jeweleryItem:action.payload
+                jeweleryItem: action.payload
             }
-    
+
         default:
             return state;
     }

@@ -11,55 +11,52 @@ import { Link } from 'react-router-dom'
 const Home = () => {
     return (
         <>
-        <Hero/>
-       
-        {/* categories section start */}
-        <section className={styles.category}>
-            <div className='container'>
-                    <div className='row mt-4'>
-                    <Link to={`/details/men's clothing`}>   <h3>MENS'S CLOTHING</h3></Link> 
-                        <Card/>
-                    </div>
-            </div>
-         
-        </section>
-        <hr/>
-        <section className={styles.category}>
-            <div className='container'>
-                    <div className='row mt-4'>
-                    <Link to={`/details/women's clothing`}> <h3>WOMEN'S CLOTHING</h3></Link>
-                        <Womens/>
-                    </div>
-            </div>
-        </section>
-          {/* categories section end */}
-          
-          {/* banner section start */}
-          <section className={styles.banner}>
-                <img src={hero_banner} alt='hero_banner' className='img-fluid' />
-          </section>
-          {/* banner section end */}
+            <Hero />
 
-        {/* latest products section start */}
-        <section className={styles.category}>
-            <div className='container'>
+            {/* categories section start */}
+            <section className={styles.category}>
+                <div className='container'>
                     <div className='row mt-4'>
-                    <Link to={`/details/electronics`}><h3>ELECTRONICS</h3></Link>
-                        <Electronics/>
+                        <Link to={`/details/men's clothing`}>   <h3>MENS'S CLOTHING</h3></Link>
+                        <Card />
                     </div>
-            </div>
-        </section>
-        <hr/>
-        <section className={styles.category}>
-            <div className='container'>
+                </div>
+
+            </section>
+            <hr />
+            <section className={styles.category}>
+                <div className='container'>
                     <div className='row mt-4'>
-                    <Link to={`/details/jewelery`}> <h3>JEWELERY</h3></Link>
-                        <Jewelery/>
+                        <Link to={`/details/women's clothing`}> <h3>WOMEN'S CLOTHING</h3></Link>
+                        <Womens />
                     </div>
-            </div>
-        </section>
-          {/* latest products section end */}
-         </>
+                </div>
+            </section>
+
+            {/* banner section start */}
+            <section className={styles.banner}>
+                <img src={hero_banner} alt='hero_banner' className='img-fluid' />
+            </section>
+
+            {/* latest products section start */}
+            <section className={styles.category}>
+                <div className='container'>
+                    <div className='row mt-4'>
+                        <Link to={`/details/electronics`}><h3>ELECTRONICS</h3></Link>
+                        <Electronics />
+                    </div>
+                </div>
+            </section>
+            <hr />
+            <section className={styles.category}>
+                <div className='container'>
+                    <div className='row mt-4'>
+                        <Link to={`/details/jewelery`}> <h3>JEWELERY</h3></Link>
+                        <Jewelery />
+                    </div>
+                </div>
+            </section>
+        </>
     )
 }
 

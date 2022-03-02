@@ -1,4 +1,4 @@
-import { BrowserRouter as Router , Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Footer from './components/footer/Footer';
 import { Header } from './components/header/Header';
@@ -10,12 +10,13 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Products from './pages/Products/Products';
 import Error from './pages/Error/Error';
+import CartScreen from './pages/Cart/CartScreen';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Header/>
+        <Header />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/products' component={Products} />
@@ -24,9 +25,10 @@ function App() {
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
           <Route path='/login' component={Login} />
+          <Route path='/cart' component={CartScreen} />
           <Route path='*' component={Error} />
         </Switch>
-        <Footer/>
+        <Footer />
       </Router>
     </div>
   );

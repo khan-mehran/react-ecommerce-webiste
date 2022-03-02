@@ -1,4 +1,4 @@
-import  userReducer  from "./userReducer";
+import userReducer from "./userReducer";
 import womenReducer from './womenReducer'
 import { combineReducers } from "redux";
 import electronicReducer from "./electronicReducer";

@@ -1,15 +1,15 @@
-const initialState={
-    womenItem:[]
+const initialState = {
+    womenItem: []
 }
 
-const womenReducer=(state=initialState,action)=>{
+const womenReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'WOMEN_CLOTH':
-            return{
+            return {
                 ...state,
-                womenItem:action.payload
+                womenItem: action.payload
             }
-    
+
         default:
             return state;
     }
